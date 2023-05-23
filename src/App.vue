@@ -1,9 +1,11 @@
 <script setup>
-import Earth from './components/Earth.vue'
+import Earth from './components/Earth.vue';
+import AirLineOnEarth from './components/AirLineOnEarth.vue';
 </script>
 
 <template>
-  <Earth></Earth>
+  <!-- <Earth></Earth> -->
+  <AirLineOnEarth></AirLineOnEarth>
 </template>
 
 <style scoped>

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Tokens which are not allowed to be tracked via git
+src/utils/Tokens.js

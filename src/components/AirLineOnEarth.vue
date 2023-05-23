@@ -5,8 +5,8 @@
 <script setup>
     import { onMounted } from 'vue';
     import * as Cesium from 'cesium';
-    import "cesium/Build/Cesium/Widgets/widgets.css";
-
+    import Tokens from '../utils/Tokens.js';
+    import "/node_modules/cesium/Build/Cesium/Widgets/widgets.css";
     onMounted(() => {
         window.CESIUM_BASE_URL = '/node_modules/cesium/Build/Cesium/';
         
