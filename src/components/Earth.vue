@@ -5,6 +5,7 @@
 <script setup>
     import { onMounted } from 'vue';
     import * as Cesium from 'cesium';
+    import Tokens from '../utils/Tokens.js';
     import "cesium/Build/Cesium/Widgets/widgets.css";
 
     onMounted(() => {
