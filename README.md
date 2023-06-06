@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# Learning Project for Cesium in Vue3
+## Background
+This project is a project to learn CesiumJS in Vue3.  
+This is the WiKi I followed: https://www.cesium.com/learn/cesiumjs-learn/
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## How to run this project
+```
+npm run dev
+```
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Code structure
+Main entry for the validation: `src\App.vue`  
+I wrote a few demos in this project. Uncomment or comment the component in that file to see the demo.
