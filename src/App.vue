@@ -3,13 +3,15 @@ import Earth from './components/Earth.vue';
 import AirLineOnEarth from './components/AirLineOnEarth.vue';
 import BasicEntitiesOnEarth from './components/BasicEntitiesOnEarth.vue';
 import BasicPrimitivesOnEarth from './components/BasicPrimitivesOnEarth.vue';
+import ContourLinesInSpecificArea from './components/ContourLinesInSpecificArea.vue';
 </script>
 
 <template>
-  <Earth></Earth>
+  <!-- <Earth></Earth> -->
   <!-- <AirLineOnEarth></AirLineOnEarth> -->
   <!-- <BasicEntitiesOnEarth></BasicEntitiesOnEarth> -->
   <!-- <BasicPrimitivesOnEarth></BasicPrimitivesOnEarth> -->
+  <ContourLinesInSpecificArea></ContourLinesInSpecificArea>
 </template>
 
 <style scoped>
