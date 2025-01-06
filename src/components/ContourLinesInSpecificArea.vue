@@ -18,6 +18,8 @@ onMounted(() => {
         terrainProvider: Cesium.createWorldTerrain() // Show the terrain on the globe.
     });
 
+    viewer.scene.globe.depthTestAgainstTerrain = true;
+
     viewer.camera.setView({
         destination: new Cesium.Cartesian3(-3027372.253472838, 4980967.677694118, 2597958.8205332863),
         orientation: {
@@ -26,6 +28,32 @@ onMounted(() => {
             roll: 6.282635403042613
         }
     });
+
+    // Specify four points
+    // [121.23311826816142, 24.315874568629347, 2187.3978569631345]
+    // [121.35027762461736, 24.327780752814242, 2092.538296280312]
+    // [121.32036563749641, 24.221675317821823, 2441.924508223284]
+    // [121.25981872880587, 24.222915733075816, 1955.3521801073277]
+    const polygonGeometry = Cesium.PolygonGeometry.fromPositions({positions: Cesium.Cartesian3.fromDegreesArray([
+      121.23311826816142, 24.315874568629347,
+      121.35027762461736, 24.327780752814242,
+      121.32036563749641, 24.221675317821823,
+      121.25981872880587, 24.222915733075816
+    ])});
+
+    const geometry = Cesium.PolygonGeometry.createGeometry(polygonGeometry);
+    const trianglePositions = Cesium.Cartesian3.unpackArray(geometry.attributes.position.values);
+    const triangleCartos = viewer.scene.globe.ellipsoid.cartesianArrayToCartographicArray(trianglePositions);
+    // const indices = geometry.indices;
+
+    Cesium.sampleTerrainMostDetailed(viewer.scene.terrainProvider, triangleCartos).then(
+        function (cartographics) {
+            // Method to get properties
+            // let firstLongitude = cartographics[0].longitude;
+            // let firstLatitude = cartographics[0].latitude;
+            // let firstHeight = cartographics[0].height;
+        }
+    );
 })
 </script>
 
