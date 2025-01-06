@@ -2,12 +2,14 @@
 import Earth from './components/Earth.vue';
 import AirLineOnEarth from './components/AirLineOnEarth.vue';
 import BasicEntitiesOnEarth from './components/BasicEntitiesOnEarth.vue';
+import BasicPrimitivesOnEarth from './components/BasicPrimitivesOnEarth.vue';
 </script>
 
 <template>
-  <!-- <Earth></Earth> -->
+  <Earth></Earth>
   <!-- <AirLineOnEarth></AirLineOnEarth> -->
-  <BasicEntitiesOnEarth></BasicEntitiesOnEarth>
+  <!-- <BasicEntitiesOnEarth></BasicEntitiesOnEarth> -->
+  <!-- <BasicPrimitivesOnEarth></BasicPrimitivesOnEarth> -->
 </template>
 
 <style scoped>
@@ -17,9 +19,11 @@ import BasicEntitiesOnEarth from './components/BasicEntitiesOnEarth.vue';
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
